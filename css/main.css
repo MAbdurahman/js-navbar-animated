@@ -107,10 +107,10 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(25, 74, 122, 0.7);
     transform: translateX(-100vw);
-}
 
+}
 .overlay-slide-right {
     transition: all 0.4s ease-in-out;
     transform: translateX(0);
