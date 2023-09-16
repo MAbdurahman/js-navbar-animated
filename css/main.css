@@ -87,7 +87,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: radial-gradient(circle, #fafafa 28%, #fafafa 100%);
+    background-image: radial-gradient(circle, #476f95 28%, #476f95 100%);
     display: -webkit-box;
     display: flex;
     -webkit-box-align: center;
