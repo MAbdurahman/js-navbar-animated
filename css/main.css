@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 /* =========================================
               Website Resets
 ============================================ */
@@ -31,3 +32,67 @@ a {
     text-decoration: none;
 }
 
+/*=============================================
+         root, html and body styles
+================================================*/
+:root {
+/**************** colors ****************/
+    --clr-monochrome-500: #194a7a;
+    --clr-monochrome-400: #476f95;
+    --clr-monochrome-300: #7593af;
+    --clr-monochrome-200: #a3b7ca;
+    --clr-monochrome-100: #d1dbe4;
+
+    --clr-neutral-100: #fafafa;
+    --clr-neutral-200: #f0f0f0;
+    --clr-neutral-300: #d9d9d9;
+    --clr-neutral-400: #bfbfbf;
+    --clr-neutral-500: #999999;
+    --clr-neutral-600: #616161;
+    --clr-neutral-700: #303030;
+    --clr-neutral-800: #121212;
+
+    /**************** fonts ****************/
+    --ff-font-primary: 'Prata', serif;
+
+
+}
+
+body {
+    font-family: var(--ff-font-primary);
+    background-color: var(--clr-monochrome-500);
+    color: var(--clr-neutral-100);
+}
+
+
+
+
+/* =========================================
+              preloader
+============================================ */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle, #fafafa 28%, #fafafa 100%);
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+#preloader-gif {
+    width: 33.333%;
+    align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+    #preloader-gif {
+        width: 60%;
+    }
+}
