@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
 /* =========================================
               Website Resets
 ============================================ */
@@ -36,12 +37,12 @@ a {
          root, html and body styles
 ================================================*/
 :root {
-/**************** colors ****************/
+    /**************** colors ****************/
     --clr-monochrome-500: #194a7a;
     --clr-monochrome-400: #476f95;
     --clr-monochrome-300: #7593af;
-    --clr-monochrome-200: #a3b7ca;
-    --clr-monochrome-100: #d1dbe4;
+    --clr-monochrome-200: #92abc4;
+    --clr-monochrome-100: #aebfd0;
 
     --clr-neutral-100: #fafafa;
     --clr-neutral-200: #f0f0f0;
@@ -56,6 +57,18 @@ a {
     --ff-font-primary: 'Prata', serif;
 
 
+    /**************** timing functions ****************/
+    --tf-timing-function-basic-01: cubic-bezier(0.26, 0.1, 0.27, 1.55);
+    --tf-timing-function-basic-02: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    --tf-timing-function-ease: cubic-bezier(0.19, 0.08, 0.46, 0.99);
+    --tf-timing-function-ease-in: cubic-bezier(0.33, 0.02, 0.84, 0.75);
+    --tf-timing-function-ease-out: cubic-bezier(0.05, 0.21, 0.66, 0.98);
+    --tf-timing-function-ease-in-out: cubic-bezier(0.38, 0, 0.57, 0.99);
+    --tf-timing-function-linear: cubic-bezier(0.19, 0.08, 0.84, 0.75);
+    --tf-timing-function-smooth: cubic-bezier(0.1, 0.7, 0.6, 0.9);
+    --tf-timing-function-snappy: cubic-bezier(0.5, 0, 0.4, 0.98);
+
+
 }
 
 body {
@@ -63,8 +76,6 @@ body {
     background-color: var(--clr-monochrome-500);
     color: var(--clr-neutral-100);
 }
-
-
 
 
 /* =========================================
@@ -111,6 +122,7 @@ body {
     transform: translateX(-100vw);
 
 }
+
 .overlay-slide-right {
     transition: all 0.4s ease-in-out;
     transform: translateX(0);
@@ -149,6 +161,7 @@ body {
     text-decoration: none;
     display: block;
     text-align: center;
+    transition: all 0.5s var(--tf-timing-function-smooth);
 }
 
 .navigation__link:hover {
@@ -177,12 +190,15 @@ body {
 .navigation__list-item:nth-of-type(2) {
     background-color: var(--clr-monochrome-400);
 }
+
 .navigation__list-item:nth-of-type(3) {
     background-color: var(--clr-monochrome-300);
 }
+
 .navigation__list-item:nth-of-type(4) {
     background-color: var(--clr-monochrome-200);
 }
+
 .navigation__list-item:nth-of-type(5) {
     background-color: var(--clr-monochrome-100);
 }
@@ -317,15 +333,24 @@ body {
     border-bottom: 1px solid var(--clr-neutral-100);
 }
 
+@media only screen and (max-width: 600px) {
+    .section-home a {
+        font-size: 0.75rem;
+    }
+}
+
 .section-about {
     background-color: var(--clr-monochrome-400);
 }
+
 .section-skills {
     background-color: var(--clr-monochrome-300);
 }
+
 .section-projects {
     background-color: var(--clr-monochrome-200);
 }
+
 .section-contact {
     background-color: var(--clr-monochrome-100);
 }
